@@ -1,15 +1,11 @@
 <script src="{{ asset('assets/vendor/requirejs/require.js') }}"></script>
+
 <script>
     requirejs.config({
         baseUrl: 'assets/js',
-        paths: {
-            jquery: '../vendor/jquery/dist/jquery.min',
-            bootstrap: '../vendor/bootstrap/dist/js/bootstrap.min'
-        },
-        shim: {
-            bootstrap: ['jquery']
-        }
     });
 
-    require(['{{ module }}', 'jquery', 'bootstrap']);
+    require(['common'], function (common) {
+        require(['{{ module }}']);
+    });
 </script>
