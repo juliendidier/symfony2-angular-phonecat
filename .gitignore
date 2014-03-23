@@ -9,6 +9,8 @@ vendor/*
 web/uploads/*
 web/bundles/*
 web/assets/*
+web/assets-built
+node_modules
 
 # Configuration files
 app/config/parameters.ini
