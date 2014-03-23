@@ -9,6 +9,7 @@
     "tests"
   ],
   "dependencies": {
+    "bootstrap-sass": "~3.0.2",
     "bootstrap": "~3.1.1",
     "requirejs": "~2.1.11"
   }
