@@ -1,0 +1,2 @@
+didier_website:
+    resource: "@DidierWebsiteBundle/Resources/config/routing.yml"

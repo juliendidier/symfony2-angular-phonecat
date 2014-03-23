@@ -1,0 +1,4 @@
+didier_website_default:
+  resource: "@DidierWebsiteBundle/Controller/DefaultController.php"
+  type: annotation
+
