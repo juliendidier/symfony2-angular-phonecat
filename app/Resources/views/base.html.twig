@@ -13,11 +13,11 @@
         {% endblock %}
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        {% block requirejs %}{% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
-
-        {% block requirejs %}{% endblock %}
 
         {% block javascripts %}{% endblock %}
     </body>
