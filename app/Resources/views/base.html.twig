@@ -3,11 +3,27 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+
+        {% block stylesheets %}
+            {% stylesheets
+                "assets/vendor/bootstrap/dist/css/bootstrap.min.css"
+            %}
+                <link rel="stylesheet" href="{{ asset(asset_url) }}" />
+            {% endstylesheets %}
+        {% endblock %}
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            {% javascripts
+                'assets/vendor/jquery/dist/jquery.min.js'
+                'assets/vendor/bootstrap/dist/js/bootstrap.js'
+            %}
+                <script type="text/javascript"
+                    src="{{ asset_url }}"></script>
+            {% endjavascripts %}    
+        {% endblock %}
     </body>
 </html>
