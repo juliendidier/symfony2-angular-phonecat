@@ -57,8 +57,24 @@ module.exports = function (grunt) {
                     }
                 ]
             }
+        },
+        watch: {
+            compass: {
+                files: '<%= appDir %>/sass/*.scss',
+                tasks: ['compass:dev']
+            }
         }
     });
+
+    grunt.registerTask('dev', [
+        'compass:dev'
+    ]);
+
+    grunt.registerTask('production', [
+        'requirejs:dist',
+        'compass:dist',
+        'uglify:dist'
+    ]);
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
