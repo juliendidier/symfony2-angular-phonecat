@@ -6,9 +6,9 @@
 
         {% block stylesheets %}
             {% stylesheets
-                "assets-built/vendor/bootstrap/dist/css/bootstrap.min.css"
+                "assets-built/css/layout.css"
             %}
-                <link rel="stylesheet" href="{{ asset('assets-built/css/layout.css') }}" />
+                <link rel="stylesheet" href="{{ asset(asset_url) }}" />
             {% endstylesheets %}
         {% endblock %}
 

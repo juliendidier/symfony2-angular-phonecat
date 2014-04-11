@@ -20,11 +20,13 @@ module.exports = function (grunt) {
                             name: 'app/homepage',
                             exclude: ['common'] 
                         }
-                    ]
-                    ,
+                    ],
                     paths: {
-                        "jquery": "../vendor/jquery/dist/jquery.min",
-                        "bootstrap": "../vendor/bootstrap/dist/js/bootstrap.min"
+                        "jquery": "../vendor/jquery/dist/jquery",
+                        "bootstrap": "../vendor/bootstrap/dist/js/bootstrap"
+                    },
+                    shim: {
+                        bootstrap: ['jquery']
                     }
                 }
             }
@@ -41,7 +43,7 @@ module.exports = function (grunt) {
             dev: {
                 options: {
                     sassDir: '<%= appDir %>/sass',
-                    cssDir: '<%= appDir %>/css',
+                    cssDir: '<%= builtDir %>/css',
                     outputStyle: 'expanded'
                 }
             }
@@ -67,6 +69,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('dev', [
+        'requirejs:dist',
         'compass:dev'
     ]);
 
