@@ -76,7 +76,6 @@ module.exports = function (grunt) {
         'uglify:dist'
     ]);
 
-    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-compass');
