@@ -1,4 +1,4 @@
-{% set assetsPath = "assets-built" %}
+{% set assetsPath = app.debug ? "assets" : "assets-built" %}
 
 <script src="{{ asset(assetsPath ~ '/vendor/requirejs/require.js') }}"></script>
 

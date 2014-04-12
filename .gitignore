@@ -8,9 +8,11 @@ vendor/*
 */cache/*
 web/uploads/*
 web/bundles/*
-web/assets/*
+web/assets/css
+web/assets/vendor
 web/assets-built
 node_modules
+.sass-cache
 
 # Configuration files
 app/config/parameters.ini

@@ -11,6 +11,10 @@ module.exports = function (grunt) {
                     dir: '<%= builtDir %>',
                     optimizeCss: "none",
                     optimize: "none",
+                    paths: {
+                        jquery: "../vendor/jquery/dist/jquery",
+                        bootstrap: "../vendor/bootstrap/dist/js/bootstrap"
+                    },
                     modules: [
                         {
                             name: 'common',
@@ -20,14 +24,7 @@ module.exports = function (grunt) {
                             name: 'app/homepage',
                             exclude: ['common'] 
                         }
-                    ],
-                    paths: {
-                        "jquery": "../vendor/jquery/dist/jquery",
-                        "bootstrap": "../vendor/bootstrap/dist/js/bootstrap"
-                    },
-                    shim: {
-                        bootstrap: ['jquery']
-                    }
+                    ]
                 }
             }
         },
@@ -43,7 +40,7 @@ module.exports = function (grunt) {
             dev: {
                 options: {
                     sassDir: '<%= appDir %>/sass',
-                    cssDir: '<%= builtDir %>/css',
+                    cssDir: '<%= appDir %>/css',
                     outputStyle: 'expanded'
                 }
             }

@@ -5,11 +5,9 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         {% block stylesheets %}
-            {% stylesheets
-                "assets-built/css/layout.css"
-            %}
-                <link rel="stylesheet" href="{{ asset(asset_url) }}" />
-            {% endstylesheets %}
+            {% set assetsPath = app.debug ? "assets" : "assets-built" %}
+
+            <link rel="stylesheet" href="{{ asset(assetsPath~'/css/layout.css') }}" />
         {% endblock %}
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
