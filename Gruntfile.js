@@ -12,17 +12,20 @@ module.exports = function (grunt) {
                     optimizeCss: "none",
                     optimize: "none",
                     paths: {
-                        jquery: "../vendor/jquery/dist/jquery",
-                        bootstrap: "../vendor/bootstrap/dist/js/bootstrap"
+                        'angular': "../vendor/angular/angular",
+                        'angular-route': '../vendor/angular-route/angular-route',
+                        'bootstrap': "../vendor/bootstrap/dist/js/bootstrap",
+                        'jquery': "../vendor/jquery/dist/jquery",
+                        'domReady': "../vendor/requirejs-domready/domReady"
                     },
                     modules: [
                         {
                             name: 'common',
-                            include: ['jquery', 'bootstrap'] 
+                            include: ['jquery', 'bootstrap', 'angular']
                         },
                         {
                             name: 'app/homepage',
-                            exclude: ['common'] 
+                            include: ['common']
                         }
                     ]
                 }

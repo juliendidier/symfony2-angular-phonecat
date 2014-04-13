@@ -1,11 +1,18 @@
 requirejs.config({
     paths: {
-        jquery: "../vendor/jquery/dist/jquery",
-        bootstrap: "../vendor/bootstrap/dist/js/bootstrap"
+        'angular': "../vendor/angular/angular",
+        'angular-route': '../vendor/angular-route/angular-route',
+        'bootstrap': "../vendor/bootstrap/dist/js/bootstrap",
+        'jquery': "../vendor/jquery/dist/jquery",
+        'domReady': "../vendor/requirejs-domready/domReady"
     },
     shim: {
-        bootstrap: ['jquery']
+        'bootstrap': ['jquery'],
+        'angular': {
+            exports: 'angular'
+        },
+        'angular-route': {
+            deps: ['angular']
+        }
     }
 });
-
-require(['jquery', 'bootstrap']);

@@ -1,6 +1,6 @@
 {% set assetsPath = app.debug ? "assets" : "assets-built" %}
 
-<script src="{{ asset(assetsPath ~ '/vendor/requirejs/require.js') }}"></script>
+<script src="{{ asset(assetsPath ~ '/vendor/requirejs/require.js') }}" data-main="{{ assetsPath }}/js/common.js"></script>
 
 <script>
     requirejs.config({

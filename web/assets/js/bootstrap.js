@@ -1,3 +1,6 @@
+/**
+ * bootstraps angular onto the window.document node
+ */
 define([
     'require',
     'angular',
@@ -5,8 +8,6 @@ define([
     'routes'
 ], function (require, ng) {
     'use strict';
-
-    require(['jquery', 'bootstrap']);
 
     require(['domReady!'], function (document) {
         ng.bootstrap(document, ['app']);
