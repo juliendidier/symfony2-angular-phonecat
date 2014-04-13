@@ -25,7 +25,7 @@ module.exports = function (grunt) {
                         },
                         {
                             name: 'app/homepage',
-                            include: ['common']
+                            exclude: ['common']
                         }
                     ]
                 }

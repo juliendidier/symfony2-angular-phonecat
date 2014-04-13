@@ -12,7 +12,7 @@ define(['./app'], function (app) {
         });
 
         $routeProvider.when('/view2', {
-            templateUrl: 'partials/partial2.html',
+            templateUrl: '/partials/partial2.html',
             controller: 'MyCtrl2'
         });
 
