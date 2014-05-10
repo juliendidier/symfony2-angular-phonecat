@@ -5,6 +5,8 @@
 define([
     'angular',
     'angular-route',
+    'ngResource',
+    'ngSanitize',
     './controllers/index',
     './directives/index',
     './filters/index',
