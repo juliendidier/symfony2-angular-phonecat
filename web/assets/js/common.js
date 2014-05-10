@@ -1,12 +1,12 @@
 requirejs.config({
     paths: {
-        angular: "../vendor/angular/angular",
-        'angular-route': '../vendor/angular-route/angular-route',
+        angular: '../vendor/angular/angular',
+        ngRoute: '../vendor/angular-route/angular-route',
         ngResource: '../vendor/angular-resource/angular-resource',
         ngSanitize: '../vendor/angular-sanitize/angular-sanitize',
-        bootstrap: "../vendor/bootstrap/dist/js/bootstrap",
-        jquery: "../vendor/jquery/dist/jquery",
-        domReady: "../vendor/requirejs-domready/domReady"
+        bootstrap: '../vendor/bootstrap/dist/js/bootstrap',
+        jquery: '../vendor/jquery/dist/jquery',
+        domReady: '../vendor/requirejs-domready/domReady'
     },
     shim: {
         bootstrap: ['jquery'],
@@ -14,7 +14,7 @@ requirejs.config({
             exports: 'angular',
             init: function () { return angular; }
         },
-        'angular-route': {
+        ngRoute: {
             deps: ['angular']
         },
         ngSanitize: {

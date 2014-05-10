@@ -7,5 +7,6 @@
  **/
 define(['angular', 'ngResource'], function (ng) {
     'use strict';
+
     return ng.module('app.services', ['ngResource']);
 });

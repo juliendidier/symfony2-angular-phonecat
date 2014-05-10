@@ -4,7 +4,7 @@
  */
 define([
     'angular',
-    'angular-route',
+    'ngRoute',
     'ngResource',
     'ngSanitize',
     './controllers/index',

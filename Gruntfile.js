@@ -12,18 +12,18 @@ module.exports = function (grunt) {
                     optimizeCss: "none",
                     optimize: "none",
                     paths: {
-                        'angular': "../vendor/angular/angular",
-                        'angular-route': '../vendor/angular-route/angular-route',
+                        angular: "../vendor/angular/angular",
+                        bootstrap: "../vendor/bootstrap/dist/js/bootstrap",
+                        domReady: "../vendor/requirejs-domready/domReady",
+                        jquery: "../vendor/jquery/dist/jquery",
                         ngResource: '../vendor/angular-resource/angular-resource',
-                        ngSanitize: '../vendor/angular-sanitize/angular-sanitize',
-                        'bootstrap': "../vendor/bootstrap/dist/js/bootstrap",
-                        'jquery': "../vendor/jquery/dist/jquery",
-                        'domReady': "../vendor/requirejs-domready/domReady"
+                        ngRoute: '../vendor/angular-route/angular-route',
+                        ngSanitize: '../vendor/angular-sanitize/angular-sanitize'
                     },
                     modules: [
                         {
                             name: 'common',
-                            include: ['jquery', 'bootstrap', 'angular', 'ngResource', 'ngSanitize', 'angular-route']
+                            include: ['jquery', 'bootstrap', 'ngSanitize', 'angular', 'ngResource', 'ngRoute']
                         },
                         {
                             name: 'app/homepage',
