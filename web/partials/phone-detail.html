@@ -1,30 +1,25 @@
-<div class="phone-images">
-  <img ng-src="{{img}}"
-       class="phone"
-       ng-repeat="img in phone.images"
-       ng-class="{active: mainImageUrl==img}">
-</div>
-
 <h1>{{phone.name}}</h1>
 
 <p>{{phone.description}}</p>
 
-<ul class="phone-thumbs">
-  <li ng-repeat="img in phone.images">
-    <img ng-src="{{img}}" ng-click="setImage(img)">
-  </li>
-</ul>
+<div class="row">
+  <div class="col-xs-8 col-md-4" ng-repeat="img in phone.images">
+    <a class="thumbnail">
+      <img ng-src="{{img}}" ng-click="setImage(img)">
+    </a>
+  </div>
+</div>
 
-<ul class="specs">
-  <li>
-    <span>Availability and Networks</span>
+<ul class="list-group">
+  <li class="list-group-item">
+    <h4>Availability and Networks</h4>
     <dl>
       <dt>Availability</dt>
       <dd ng-repeat="availability in phone.availability">{{availability}}</dd>
     </dl>
   </li>
-  <li>
-    <span>Battery</span>
+  <li class="list-group-item">
+    <h4>Battery</h4>
     <dl>
       <dt>Type</dt>
       <dd>{{phone.battery.type}}</dd>
@@ -34,8 +29,8 @@
       <dd>{{phone.battery.standbyTime}}</dd>
     </dl>
   </li>
-  <li>
-    <span>Storage and Memory</span>
+  <li class="list-group-item">
+    <h4>Storage and Memory</h4>
     <dl>
       <dt>RAM</dt>
       <dd>{{phone.storage.ram}}</dd>
@@ -43,8 +38,8 @@
       <dd>{{phone.storage.flash}}</dd>
     </dl>
   </li>
-  <li>
-    <span>Connectivity</span>
+  <li class="list-group-item">
+    <h4>Connectivity</h4>
     <dl>
       <dt>Network Support</dt>
       <dd>{{phone.connectivity.cell}}</dd>
@@ -58,8 +53,8 @@
       <dd>{{phone.connectivity.gps | checkmark}}</dd>
     </dl>
   </li>
-  <li>
-    <span>Android</span>
+  <li class="list-group-item">
+    <h4>Android</h4>
     <dl>
       <dt>OS Version</dt>
       <dd>{{phone.android.os}}</dd>
@@ -67,8 +62,8 @@
       <dd>{{phone.android.ui}}</dd>
     </dl>
   </li>
-  <li>
-    <span>Size and Weight</span>
+  <li class="list-group-item">
+    <h4>Size and Weight</h4>
     <dl>
       <dt>Dimensions</dt>
       <dd ng-repeat="dim in phone.sizeAndWeight.dimensions">{{dim}}</dd>
@@ -76,8 +71,8 @@
       <dd>{{phone.sizeAndWeight.weight}}</dd>
     </dl>
   </li>
-  <li>
-    <span>Display</span>
+  <li class="list-group-item">
+    <h4>Display</h4>
     <dl>
       <dt>Screen size</dt>
       <dd>{{phone.display.screenSize}}</dd>
@@ -87,8 +82,8 @@
       <dd>{{phone.display.touchScreen | checkmark}}</dd>
     </dl>
   </li>
-  <li>
-    <span>Hardware</span>
+  <li class="list-group-item">
+    <h4>Hardware</h4>
     <dl>
       <dt>CPU</dt>
       <dd>{{phone.hardware.cpu}}</dd>
@@ -102,8 +97,8 @@
       <dd>{{phone.hardware.accelerometer | checkmark}}</dd>
     </dl>
   </li>
-  <li>
-    <span>Camera</span>
+  <li class="list-group-item">
+    <h4>Camera</h4>
     <dl>
       <dt>Primary</dt>
       <dd>{{phone.camera.primary}}</dd>
@@ -111,8 +106,8 @@
       <dd>{{phone.camera.features.join(', ')}}</dd>
     </dl>
   </li>
-  <li>
-    <span>Additional Features</span>
+  <li class="list-group-item">
+    <h4>Additional Features</h4>
     <dd>{{phone.additionalFeatures}}</dd>
   </li>
 </ul>
