@@ -1,15 +1,15 @@
 {
-    "name": "juliendidier/didier.io",
+    "name": "juliendidier/symfony2-angular-phonecat",
     "license": "MIT",
     "type": "project",
-    "description": "didier.io website",
+    "description": "Symfony2 with RequireJS and AngularJS",
     "authors": [
         {
             "name": "Julien DIDIER",
             "email": "julien@didier.io"
         }
     ],
-    "homepage": "http://didier.io",
+    "homepage": "http://symfony2-angular-phonecat.didier.io/",
     "autoload": {
         "psr-0": { "": "src/" }
     },

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Symfony2 with RequireJS and AngularJS{% endblock %}</title>
 
         {% block stylesheets %}
             {% set assetsPath = app.debug ? "assets" : "assets-built" %}
@@ -26,13 +26,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Brand</a>
+                    <a class="navbar-brand" href="{{ path('didier_website_default_home') }}">Home</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a>Link</a></li>
                         <li><a data-toggle="modal" data-target="#myModal">Modal</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
