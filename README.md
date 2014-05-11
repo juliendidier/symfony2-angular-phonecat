@@ -6,6 +6,13 @@ Introduction
 
 This is an implementation of AngularJS built with RequireJS, in a Symfony2 project.
 
+Requirements
+------------
+
+```
+npm install bower grunt grunt-cli grunt-contrib-uglify grunt-contrib-requirejs grunt-contrib-compass grunt-contrib-watch
+```
+
 Installation
 ------------
 
