@@ -6,22 +6,26 @@ Introduction
 
 This is an implementation of AngularJS built with RequireJS, in a Symfony2 project.
 
-Requirements
-------------
+Demo
+----
 
-```
-npm install bower grunt grunt-cli grunt-contrib-uglify grunt-contrib-requirejs grunt-contrib-compass grunt-contrib-watch
-```
+You can show an instance here:
+http://symfony2-angular-phonecat.didier.io/
 
 Installation
 ------------
 
-You can install dependencies with bower:
+Install requirements:
+```
+npm install
+```
+
+Install dependencies with bower:
 ```
 bower install
 ```
 
-Build assets
+Build assets:
 ```
 grunt production
 ```
