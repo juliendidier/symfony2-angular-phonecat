@@ -1,28 +1,34 @@
 requirejs.config({
     paths: {
         angular: '../vendor/angular/angular',
-        ngRoute: '../vendor/angular-route/angular-route',
-        ngResource: '../vendor/angular-resource/angular-resource',
-        ngSanitize: '../vendor/angular-sanitize/angular-sanitize',
         bootstrap: '../vendor/bootstrap/dist/js/bootstrap',
+        domReady: '../vendor/requirejs-domready/domReady',
         jquery: '../vendor/jquery/dist/jquery',
-        domReady: '../vendor/requirejs-domready/domReady'
+        ngGoogleMaps: '../vendor/angular-google-maps/dist/angular-google-maps',
+        ngResource: '../vendor/angular-resource/angular-resource',
+        ngRoute: '../vendor/angular-route/angular-route',
+        ngSanitize: '../vendor/angular-sanitize/angular-sanitize',
+        underscore: '../vendor/underscore/underscore'
     },
     shim: {
-        bootstrap: ['jquery'],
         angular: {
             exports: 'angular',
             init: function () { return angular; }
+        },
+        bootstrap: ['jquery'],
+        ngGoogleMaps: {
+            exports: 'ngGoogleMaps',
+            deps: ['angular', 'underscore']
+        },
+        ngResource: {
+            exports: 'ngResource',
+            deps: ['angular']
         },
         ngRoute: {
             deps: ['angular']
         },
         ngSanitize: {
             exports: 'ngSanitize',
-            deps: ['angular']
-        },
-        ngResource: {
-            exports: 'ngResource',
             deps: ['angular']
         }
     }

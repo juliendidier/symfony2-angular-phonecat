@@ -15,6 +15,10 @@ define(['./app'], function (app) {
                 templateUrl: '/partials/phone-detail.html',
                 controller: 'PhoneDetailCtrl'
             })
+            .when('/map', {
+                templateUrl: '/partials/map.html',
+                controller: 'MapCtrl'
+            })
             .otherwise({
                 redirectTo: '/phones'
             })

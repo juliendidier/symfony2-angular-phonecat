@@ -19,6 +19,7 @@ define([
         'app.directives',
         'app.filters',
         'app.services',
-        'ngRoute'
+        'ngRoute',
+        'google-maps'
     ]);
 });

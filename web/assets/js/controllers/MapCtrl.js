@@ -1,10 +1,8 @@
 define(['./module'], function (controllers) {
     'use strict';
 
-    controllers.controller('PhoneListCtrl', ['$scope', 'Phone', function($scope, Phone) {
-            $scope.phones = Phone.query();
-            $scope.orderProp = 'age';
-
+    controllers.controller('MapCtrl', ['$scope', 'google-maps',
+        function($scope) {
             $scope.map = {
                 center: {
                     latitude: 48.893901824951,
@@ -12,5 +10,6 @@ define(['./module'], function (controllers) {
                 },
                 zoom: 8
             };
-    }]);
+        }
+    ]);
 });

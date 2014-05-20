@@ -6,6 +6,10 @@
     }) }}
 {% endblock %}
 
+{% block javascripts %}
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+{% endblock %}
+
 {% block body %}
     <div class="view-container">
         <div ng-view class="view-frame"></div>
