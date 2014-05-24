@@ -13,6 +13,7 @@ web/assets/vendor
 web/assets-built
 node_modules
 .sass-cache
+composer.lock
 
 # Configuration files
 app/config/parameters.ini
