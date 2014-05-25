@@ -71,7 +71,6 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('dev', [
-        'requirejs:dist',
         'compass:dev'
     ]);
 
