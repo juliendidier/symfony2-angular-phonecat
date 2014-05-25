@@ -21,7 +21,7 @@
         <li ng-repeat="phone in phones | filter:query | orderBy:orderProp"
             class="thumbnail phone-listing">
           <a href="#/phones/{{phone.id}}" class="thumbnail">
-            <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}">
+            <img ng-src="/{{phone.imageUrl}}" alt="{{phone.name}}">
           </a>
           <div class="caption">
             <h3><a href="#/phones/{{phone.id}}">{{phone.name}}</a></h3>
