@@ -6,12 +6,6 @@ Introduction
 
 This is an implementation of AngularJS built with RequireJS, in a Symfony2 project.
 
-Demo
-----
-
-You can show an instance here:
-http://symfony2-angular-phonecat.didier.io/
-
 Installation
 ------------
 
